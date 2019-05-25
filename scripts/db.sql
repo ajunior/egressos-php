@@ -1,3 +1,7 @@
+-- Database: egressos_db 
+-- Author: Adjamilton Junior (jr@ieee.org) 
+-- Date: Sat 25, 2019 - 01:12:26
+
 CREATE DATABASE egressos_db;
 
 USE egressos_db;
@@ -14,19 +18,18 @@ INSERT INTO users
 
 CREATE TABLE IF NOT EXISTS egressos (
   id VARCHAR(12) NOT NULL PRIMARY KEY,
-  nomeCompactado VARCHAR(32),
+  nomeCompactado VARCHAR(48) DEFAULT NULL,
   nome VARCHAR(60) NOT NULL,
-  email VARCHAR(48) NOT NULL UNIQUE,
-  avatar VARCHAR(18) UNIQUE,
-  curso VARCHAR(48),
-  campus VARCHAR(32),
+  email VARCHAR(60) UNIQUE DEFAULT NULL,
+  avatar VARCHAR(18) UNIQUE DEFAULT NULL,
+  curso VARCHAR(48) DEFAULT NULL,
+  campus VARCHAR(32) DEFAULT NULL,
   egresso BOOL NOT NULL,
-  linkedin VARCHAR(256) UNIQUE,
-  github VARCHAR(256) UNIQUE,
-  facebook VARCHAR(256) UNIQUE,
-  lattes VARCHAR(256) UNIQUE,
-  researchgate VARCHAR(256) UNIQUE,
-  twitter VARCHAR(256) UNIQUE,
-  instagram VARCHAR(256) UNIQUE
+  linkedin VARCHAR(256) UNIQUE DEFAULT NULL,
+  github VARCHAR(256) UNIQUE DEFAULT NULL,
+  facebook VARCHAR(256) UNIQUE DEFAULT NULL,
+  lattes VARCHAR(256) UNIQUE DEFAULT NULL,
+  researchgate VARCHAR(256) UNIQUE DEFAULT NULL,
+  twitter VARCHAR(256) UNIQUE DEFAULT NULL,
+  instagram VARCHAR(256) UNIQUE DEFAULT NULL
 );
-
