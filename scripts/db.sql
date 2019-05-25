@@ -1,6 +1,6 @@
 -- Database: egressos_db 
 -- Author: Adjamilton Junior (jr@ieee.org) 
--- Date: Sat 25, 2019 - 01:12:26
+-- Created on Sat May 25 01:12:26 2019
 
 CREATE DATABASE egressos_db;
 
@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS users (
 
 INSERT INTO users 
   VALUES (DEFAULT, 'jr@ieee.org', md5('12345')),
-		 (DEFAULT, 'adjamilton.junior@academico.ifpb.edu.br', md5('ifpb'));
+         (DEFAULT, 'adjamilton.junior@academico.ifpb.edu.br', md5('ifpb'));
 
 CREATE TABLE IF NOT EXISTS egressos (
   id VARCHAR(12) NOT NULL PRIMARY KEY,
