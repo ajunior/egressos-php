@@ -2,3 +2,8 @@ main {
     width: 480px;
     margin: 180px auto 0px auto;
 }
+
+#alerta {
+    width: 480px;
+    margin-top: 0px;
+}

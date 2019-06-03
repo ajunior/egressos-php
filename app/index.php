@@ -1,5 +1,6 @@
 <?php
 
+require_once 'config.php';
 require_once 'model/User.php';
 $u = new User;
 
@@ -40,9 +41,20 @@ $u = new User;
               if($u->err == "") {
                   if($u->login($email, $passwd)) {
                     header("location: egressos.php");
+                  } else {
+                    ?>
+                        <div class="alert alert-danger" role="alert">
+                          Email e/ou senha incorretos.
+                        </div>
+                     <?php
                   }
+
               } else {
-                  // deu erro
+                  ?>
+                    <div class="alert alert-danger" role="alert">
+                      <?php echo "Erro: " . $u->err; ?>
+                    </div>
+                  <?php
               }
           }
       }
