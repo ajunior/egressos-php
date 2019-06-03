@@ -27,11 +27,6 @@ $u = new User;
       </div>
       <button type="submit" class="btn btn-primary">Acessar</button>
     </form>
-<!--    <form class="form" method="POST" action="auth.php">-->
-<!--      <input type="email" name="email" placeholder="Email">-->
-<!--      <input type="password" name="passwd" placeholder="Senha">-->
-<!--      <input class="btn btn-outline-primary" type="submit" value="Login">-->
-<!--    </form>-->
   </main>
 
   <?php
