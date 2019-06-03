@@ -14,7 +14,8 @@ $u = new User;
   <link rel="stylesheet" href="public/assets/css/style.css">
 </head>
 <body>
-  <main>
+  <main class="card card-body">
+    <h5 class="card-title">Acessar lista de egressos</h5>
     <form method="POST">
       <div class="form-group">
         <label for="exampleInputEmail1">Email</label>
@@ -24,7 +25,7 @@ $u = new User;
         <label for="exampleInputPassword1">Senha</label>
         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
       </div>
-      <button type="submit" class="btn btn-outline-primary">Acessar</button>
+      <button type="submit" class="btn btn-primary">Acessar</button>
     </form>
 <!--    <form class="form" method="POST" action="auth.php">-->
 <!--      <input type="email" name="email" placeholder="Email">-->
