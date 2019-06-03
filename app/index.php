@@ -15,11 +15,22 @@ $u = new User;
 </head>
 <body>
   <main>
-    <form class="form" method="POST" action="auth.php">
-      <input type="email" name="email" placeholder="Email">
-      <input type="password" name="passwd" placeholder="Senha">
-      <input class="btn btn-outline-primary" type="submit" value="Login">
+    <form method="POST">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="exemplo@email.com">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Senha</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+      </div>
+      <button type="submit" class="btn btn-outline-primary">Acessar</button>
     </form>
+<!--    <form class="form" method="POST" action="auth.php">-->
+<!--      <input type="email" name="email" placeholder="Email">-->
+<!--      <input type="password" name="passwd" placeholder="Senha">-->
+<!--      <input class="btn btn-outline-primary" type="submit" value="Login">-->
+<!--    </form>-->
   </main>
 
   <?php
