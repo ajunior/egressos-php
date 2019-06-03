@@ -23,7 +23,7 @@ class Egresso {
         $sql->execute();
 
         if($sql->rowCount() > 0) {
-            $egressos = $sql->fetch();
+            $egressos = $sql->fetchAll();
 
             return $egressos;
         }

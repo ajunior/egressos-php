@@ -43,9 +43,56 @@ if($eg->err == "") {
 
   <section id="lista-egressos" class="egressos">
       <?php
-          var_dump($egressos['nome']);
-      ?>
+          array_multisort(array_column($egressos, 'nomeCompactado'), SORT_ASC, $egressos);
 
+          foreach($egressos as $egresso) {
+              $avatar = "placeholder.jpg";
+              $linkedin = "";
+              $github = "";
+              $facebook = "";
+              $instagram = "";
+              $twitter = "";
+
+              if (!is_null($egresso['avatar']))
+                $avatar = $egresso['avatar'];
+
+              if (!is_null($egresso['linkedin']))
+                  $linkedin = "<a target='_blank' href='{$egresso['linkedin']}'><img src='public/img/icons/linkedin.png' alt='linkedin'/></a>";
+
+              if (!is_null($egresso['github']))
+                  $github = "<a target='_blank' href= {$egresso['github']}'><img src='public/img/icons/github.png' alt='github'/></a>";
+
+              if (!is_null($egresso['facebook']))
+                  $facebook = "<a target='_blank' href='{$egresso['facebook']}'><img src='public/img/icons/facebook.png' alt='facebook'/></a>";
+
+              if (!is_null($egresso['instagram']))
+                  $instagram = "<a target='_blank' href='{$egresso['instagram']}'><img src='public/img/icons/instagram.png' alt='instagram'/></a>";
+
+              if (!is_null($egresso['twitter']))
+                  $twitter = "<a target='_blank' href='{$egresso['twitter']}'><img src='public/img/icons/twitter.png' alt='twitter'/></a>";
+
+
+
+              echo
+              "<div class='egresso'>
+                <figure>
+                  <img src='public/img/egressos/{$avatar}'>
+                </figure>
+                <div class='icons'>
+                  $linkedin
+                  $github
+                  $facebook
+                  $instagram
+                  $twitter
+                </div>
+                <div class='info'>
+                </div>
+                <div class='name'>
+                  <h2>{$egresso['nomeCompactado']}</h2>
+                </div>
+              </div>";
+          }
+      ?>
   </section>
 </body>
 </html>
