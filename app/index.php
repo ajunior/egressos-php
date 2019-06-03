@@ -19,13 +19,13 @@ $u = new User;
     <form method="POST">
       <div class="form-group">
         <label for="exampleInputEmail1">Email</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="exemplo@email.com">
+        <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="exemplo@email.com">
       </div>
       <div class="form-group">
         <label for="exampleInputPassword1">Senha</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Digite sua senha">
+        <input type="password" class="form-control" name="passwd" placeholder="Digite sua senha">
       </div>
-      <button type="submit" class="btn btn-primary">Acessar</button>
+      <input type="submit" class="btn btn-primary" value="Acessar">
     </form>
   </main>
 
