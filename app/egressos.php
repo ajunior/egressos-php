@@ -1,13 +1,26 @@
 <?php
-
-require_once 'model/Egresso.php';
-$eg = new Egresso;
-
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 session_start();
 
 if(!isset($_SESSION['userid'])) {
     header("location: index.php");
     exit;
+}
+
+require_once 'model/Egresso.php';
+$eg = new Egresso;
+
+$eg->connect();
+
+if($eg->err == "") {
+    $egressos = $eg->listaEgressos();
+} else {
+    ?>
+      <div class="alert alert-danger" role="alert">
+        <?php echo "Erro: " . $u->err; ?>
+      </div>
+    <?php
 }
 
 ?>
@@ -22,14 +35,19 @@ if(!isset($_SESSION['userid'])) {
 </head>
 <body>
   <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand">Egressos</a>
+    <a class="navbar-brand">Egressos do IFPB</a>
     <form class="form-inline">
       <a href="logout.php" class="btn btn-outline-danger my-2 my-sm-0" type="submit">Sair</a>
     </form>
   </nav>
 
-  <section id="lista-egressos">
-
+  <section id="lista-egressos" class="egressos">
+      <?php
+          foreach ($egressos as $e) {
+              echo "{$e}";
+          }
+      ?>
+    
   </section>
 </body>
 </html>
