@@ -43,11 +43,9 @@ if($eg->err == "") {
 
   <section id="lista-egressos" class="egressos">
       <?php
-          foreach ($egressos as $e) {
-              echo "{$e}";
-          }
+          var_dump($egressos['nome']);
       ?>
-    
+
   </section>
 </body>
 </html>

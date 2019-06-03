@@ -47,6 +47,7 @@ h1 {
     transition: all .4s;
     border-radius: 5px;
     overflow: hidden;
+    margin-top: 50px;
 }
 
 .egresso:hover {

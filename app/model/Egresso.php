@@ -19,11 +19,12 @@ class Egresso {
     public function listaEgressos() {
         global $pdo;
 
-        $sql = $pdo->prepare("SELECT * FROM egressos");
+        $sql = $pdo->prepare("SELECT * FROM egressos;");
         $sql->execute();
 
         if($sql->rowCount() > 0) {
             $egressos = $sql->fetch();
+
             return $egressos;
         }
     }
